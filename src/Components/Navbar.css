@@ -1,0 +1,43 @@
+/* Navbar.css */
+
+.navbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: black;
+}
+
+.navbar img {
+  height: 40px; /* Adjust logo size */
+}
+
+.dropdown-menu {
+  position: relative;
+}
+
+.dropdown-menu .dropdown-items {
+  display: none;
+  position: absolute;
+  background-color: yellow; /* Dropdown background */
+  z-index: 10;
+}
+
+.dropdown-menu:hover .dropdown-items {
+  display: block; /* Show dropdown on hover */
+}
+
+@media (max-width: 640px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .dropdown-menu .dropdown-items {
+    position: static; /* Reset position for mobile */
+  }
+
+  .dropdown-menu:hover .dropdown-items {
+    display: block; /* Show dropdown on hover for mobile */
+  }
+}
