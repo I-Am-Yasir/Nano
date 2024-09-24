@@ -1,0 +1,86 @@
+/* Container for 3D Perspective */
+.perspective {
+    perspective: 1000px;
+  }
+  
+  /* Preserve 3D effect */
+  .preserve-3d {
+    transform-style: preserve-3d;
+    transition: transform 1s;
+  }
+  
+  /* Flip animation on hover */
+  .group:hover .preserve-3d {
+    transform: rotateY(180deg);
+  }
+  
+  /* Hide the back side */
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+  
+  /* Positioning */
+  .relative {
+    position: relative;
+  }
+  .absolute {
+    position: absolute;
+  }
+  
+  /* Rotate back side */
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+  
+  /* Styling for Cards */
+  .border {
+    border-width: 1px;
+  }
+  .rounded-lg {
+    border-radius: 0.75rem;
+  }
+  .overflow-hidden {
+    overflow: hidden;
+  }
+  .bg-gray-800 {
+    background-color: #2d3748;
+  }
+  .bg-yellow-400 {
+    background-color: #ecc94b;
+  }
+  
+  /* Flexbox and Spacing */
+  .flex {
+    display: flex;
+  }
+  .flex-col {
+    flex-direction: column;
+  }
+  .items-center {
+    align-items: center;
+  }
+  .justify-center {
+    justify-content: center;
+  }
+  .text-xl {
+    font-size: 1.25rem;
+  }
+  .font-bold {
+    font-weight: 700;
+  }
+  .text-white {
+    color: #fff;
+  }
+  .w-24 {
+    width: 6rem;
+  }
+  .h-24 {
+    height: 6rem;
+  }
+  .mb-4 {
+    margin-bottom: 1rem;
+  }
+  .p-6 {
+    padding: 1.5rem;
+  }
+  

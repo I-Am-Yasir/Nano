@@ -7,11 +7,14 @@ import About from './Components/About';
 import Contact from './Components/Contact';
 import Services from './Components/Services';
 import Sidebar from './Components/Sidebar/Sidebar';
+import Product from './Components/product/Product';
 const App = () => {
   return (
     <>
+    
       <Navbar />
       <Sidebar/>
+      <Product/>
     </>
   );
 };
