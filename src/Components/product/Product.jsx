@@ -31,29 +31,32 @@ const Product = () => {
   ];
 
   return (
-    <div className="container py-12 px-4">
+    <div className="container py-12 px-4 mx-auto">
       {/* Headings */}
-      <div className="mb-12">
-        <h2 className="text-xl text-orange-500 font-bold text-left">Our Products</h2>
-        <h1 className="text-4xl text-orange-500 font-extrabold text-left">Product List</h1>
+      <div className="mb-12 text-left">
+        <h2 className="text-xl text-orange-500 font-bold">Our Products</h2>
+        <h1 className="text-4xl text-orange-500 font-extrabold">Product List</h1>
       </div>
 
-      {/* Product Cards Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      {/* Product Cards flex */}
+      <div className="flex flex-wrap justify-center gap-8">
         {products.map((product, index) => (
-          <div key={index} className="group perspective w-full h-80">
-            <div className="relative preserve-3d group-hover:rotate-y-180 w-full h-full max-w-[320px] max-h-[260px] duration-1000 mx-auto">
+          <div
+            key={index}
+            className="group w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4 flex justify-center"
+          >
+            <div className="relative preserve-3d group-hover:rotate-y-180 w-full h-80 max-w-xs duration-1000 mx-auto">
               {/* Front Side */}
-              <div className="absolute backface-hidden border border-gray-200 w-full h-full rounded-lg overflow-hidden bg-[#292929] flex flex-col items-center justify-center">
+              <div className="absolute backface-hidden border border-gray-200 rounded-lg overflow-hidden bg-[#292929] flex flex-col items-center justify-center w-full h-full">
                 <img src={product.image} alt={product.name} className="w-36 h-36 mb-4 rounded-full" />
-                <h2 className="text-4xl font-bold text-white">{product.name}</h2>
+                <h2 className="text-3xl font-bold text-white text-center">{product.name}</h2>
               </div>
 
               {/* Back Side */}
-              <div className="absolute rotate-y-180 backface-hidden bg-yellow-400 text-gray-800 w-full h-full rounded-lg flex items-center justify-center text-center p-6">
+              <div className="absolute rotate-y-180 backface-hidden bg-yellow-400 text-gray-800 rounded-lg flex items-center justify-center text-center p-6 w-full h-full">
                 <div>
                   <h2 className="text-xl font-bold mb-2">{product.name}</h2>
-                  <ul className="text-left">
+                  <ul className="text-center">
                     {product.details.map((detail, idx) => (
                       <li key={idx} className="text-sm font-medium mb-1">
                         - {detail}
@@ -71,4 +74,3 @@ const Product = () => {
 };
 
 export default Product;
-    
